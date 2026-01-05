@@ -5,7 +5,7 @@ form {
     }
 
     .input-wrapper {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
@@ -99,5 +99,202 @@ form {
 
     #presencial:not(:checked)+.type-btn svg path {
         fill: #869198;
+    }
+
+    #color-buttons button {
+        all: unset;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0.3125rem solid var(--shape-button);
+    }
+
+    #color-buttons #brand-light {
+        background-color: var(--brand-light);
+    }
+
+    #color-buttons #accent-navy {
+        background-color: var(--accent-navy);
+    }
+
+    #color-buttons #accent-purple {
+        background-color: var(--accent-purple);
+    }
+
+    #color-buttons #accent-fuschia {
+        background-color: var(--accent-fuschia);
+    }
+
+    #color-buttons #accent-pink {
+        background-color: var(--accent-pink);
+    }
+
+    #color-buttons #feedback-danger {
+        background-color: var(--feedback-danger);
+    }
+
+    #color-buttons #accent-orange {
+        background-color: var(--accent-orange);
+    }
+
+    #color-buttons #accent-yellow {
+        background-color: var(--accent-yellow);
+    }
+
+    #color-buttons #accent-lime {
+        background-color: var(--accent-lime);
+    }
+
+    #color-buttons #accent-green {
+        background-color: var(--accent-green);
+    }
+
+    #color-buttons #accent-cyan {
+        background-color: var(--accent-cyan);
+    }
+
+    #event-theme>p,
+    #main-color>p {
+        margin-block: 1.5rem 1rem;
+        font: var(--body-sm);
+        color: #fff;
+    }
+
+    #theme-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    #theme-buttons button {
+        all: unset;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        transition: border-color 0.2s ease;
+        background-color: var(--shape-button);
+        border: 1px solid var(--input-stroke);
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.25rem 0.25rem 0 0.25rem;
+
+        p {
+            font: var(--body-sm);
+            color: var(--text-heading);
+            padding-block: 0.5rem;
+        }
+    }
+
+    .theme-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        font: var(--body-sm);
+        color: var(--text-body);
+        margin-top: 1.75rem;
+    }
+
+    .toggle-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .toggle-wrapper input {
+        display: none;
+    }
+
+    .switch {
+        position: relative;
+        width: 4rem;
+        height: 2rem;
+        background: #2b2b2b;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .switch::after {
+        content: "";
+        position: absolute;
+        top: 0.2rem;
+        left: 0.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #555;
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+
+    .toggle-wrapper input:checked+.switch {
+        background: #59B2FF;
+    }
+
+    .toggle-wrapper input:checked+.switch::after {
+        left: calc(100% - 1.75rem);
+        background: #fff;
+    }
+
+    .mode-text {
+        font: var(--body-sm);
+        color: var(--text-heading);
+    }
+
+    .mode-text.claro {
+        display: none;
+    }
+
+    .toggle-wrapper input:checked~.escuro {
+        display: none;
+    }
+
+    .toggle-wrapper input:checked~.claro {
+        display: inline;
+    }
+
+    #toggle-drop {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        margin-top: 1.75rem;
+
+        span {
+            font: var(--body-sm);
+            color: var(--text-body);
+        }
+    }
+
+    #input-drop {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        gap: 0.75rem;
+
+        label {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem;
+            background-color: var(--shape-button);
+            border-radius: 0.5rem;
+            width: 7.43rem;
+
+            img {
+                width: 1rem;
+                height: 1rem;
+            }
+
+            span {
+                font: var(--body-sm);
+                color: var(--text-heading);
+            }
+        }
+
     }
 }

@@ -29,7 +29,7 @@
             <h2>Crie seu convite</h2>
 
             <div id="forms">
-                <form>
+                <form action="">
                     <fieldset id="about-event">
                         <legend>
                             <img src="./src/assets/icons/calendar.svg" alt="Ícone de calendário">
@@ -94,7 +94,115 @@
 
                         <div class="input-wrapper">
                             <label for="description">Descrição</label>
-                            <textarea id="description" name="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                            <textarea id="description" name="description"
+                                placeholder="Escreva sobre os detalhes do evento"></textarea>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset id="customization">
+                        <legend>
+                            <img src="./src/assets/icons/pointbrush.svg" alt="">
+                            <h3>Personalização</h3>
+                        </legend>
+
+                        <div id="main-color">
+                            <p>Cor principal</p>
+
+                            <div id="color-buttons">
+                                <button type="button" id="brand-light"></button>
+                                <button type="button" id="accent-navy"></button>
+                                <button type="button" id="accent-purple"></button>
+                                <button type="button" id="accent-fuschia"></button>
+                                <button type="button" id="accent-pink"></button>
+                                <button type="button" id="feedback-danger"></button>
+                                <button type="button" id="accent-orange"></button>
+                                <button type="button" id="accent-yellow"></button>
+                                <button type="button" id="accent-lime"></button>
+                                <button type="button" id="accent-green"></button>
+                                <button type="button" id="accent-cyan"></button>
+                            </div>
+                        </div>
+
+                        <div id="event-theme">
+                            <p>Tema do evento</p>
+                            <div id="theme-buttons">
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image1.png" alt="">
+                                    <p>Aniversário</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image2.png" alt="">
+                                    <p>Infantil</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image3.png" alt="">
+                                    <p>Formatura</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image4.png" alt="">
+                                    <p>Casamento</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image5.png" alt="">
+                                    <p>Chá de bebê</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image6.png" alt="">
+                                    <p>Chá de panela</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image7.png" alt="">
+                                    <p>Carnaval</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image8.png" alt="">
+                                    <p>Páscoa</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image9.png" alt="">
+                                    <p>São João</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image10.png" alt="">
+                                    <p>Halloween</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image11.png" alt="">
+                                    <p>Natal</p>
+                                </button>
+                                <button type="button">
+                                    <img src="./src/assets/images/themes/Image12.png" alt="">
+                                    <p>Outro</p>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="input-flex">
+                            <div class="theme-toggle">
+                                <span>Estilo</span>
+
+                                <div class="toggle-wrapper">
+                                    <input type="checkbox" id="theme-toggle">
+
+                                    <label for="theme-toggle" class="switch"></label>
+
+                                    <span class="mode-text escuro">Escuro</span>
+                                    <span class="mode-text claro">Claro</span>
+                                </div>
+                            </div>
+
+                            <div id="toggle-drop">
+                                <span>Foto da capa</span>
+                                <div id="input-drop">
+                                    <input type="file" id="real-input" hidden>
+                                    <label for="real-input" class="custom-button">
+                                        <img src="./src/assets/icons/upload.svg" alt="">
+                                        <span>Selecionar</span>
+                                    </label>
+                                    <span id="file-name">Nenhum arquivo escolhido</span>
+                                </div>
+                            </div>
                         </div>
 
                     </fieldset>
