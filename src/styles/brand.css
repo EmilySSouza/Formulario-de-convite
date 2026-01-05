@@ -1,5 +1,5 @@
 #brand {
-    max-width: 25rem;
+    width: 25rem;
     border-radius: 0.75rem;
     background: url('../assets/images/Background.png') center/cover no-repeat;
 }

@@ -1,6 +1,7 @@
 main {
     display: grid;
-    grid-template-columns: 51.45% 48.75%;
+    grid-template-columns: 25rem 1fr;
+    gap: 1.25rem;
     width: 100%;
     min-height: 100vh;
     background-color: #1E1E1E;
