@@ -1,0 +1,18 @@
+#terms {
+    margin-top: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    border-top: 1px solid var(--input-stroke);
+    padding-top: 3rem;
+}
+
+#political-terms,
+#receive-email,
+#receive-email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
