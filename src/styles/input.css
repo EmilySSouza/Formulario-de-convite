@@ -4,6 +4,43 @@ form {
         color: var(--text-body);
     }
 
+    input, textarea {
+        appearance: none;
+        width: 100%;
+        background-color: var(--input-base);
+        border: 1px solid var(--input-stroke);
+        border-radius: 0.5rem;
+        font: var(--body-md);
+        color: var(--input-placeholder);
+        
+        &::placeholder {
+            color: var(--input-placeholder);
+        }
+    }
+
+    input {
+        padding: 0.81rem 1rem;
+    }
+
+    textarea {
+        padding: 1rem;
+        height: 8.5rem;
+    }
+
+    input[type="checkbox"] {
+        width: 1.25rem;
+        height: 1.25rem;
+        padding: 0;
+        border-radius: 0.25rem;
+        
+        &:checked {
+            background-image: url("../assets/icons/check.svg");
+            background-repeat: no-repeat;
+            background-size: 1.1rem;
+            border: 1px solid var(--brand-light);
+        }
+    }
+
     .input-wrapper {
         margin-top: 1.5rem;
         display: flex;
@@ -17,37 +54,6 @@ form {
         margin-top: -0.5rem;
     }
 
-    input {
-        appearance: none;
-        background-color: var(--input-base);
-        padding: 0.81rem 1rem;
-        border: 1px solid var(--input-stroke);
-        border-radius: 0.5rem;
-        width: 100%;
-        font: var(--body-md);
-        color: var(--input-placeholder);
-    }
-
-    input::placeholder {
-        color: var(--input-placeholder);
-    }
-
-    textarea {
-        appearance: none;
-        width: 100%;
-        background-color: var(--input-base);
-        font: var(--body-md);
-        color: var(--input-placeholder);
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border: 1px solid var(--input-stroke);
-        height: 8.5rem;
-    }
-
-    textarea::placeholder {
-        color: var(--input-placeholder);
-    }
-
     fieldset {
         .input-flex {
             width: 100%;
@@ -55,6 +61,9 @@ form {
             gap: 1rem;
         }
 
+        .input-flex:has(.toggle-wrapper):has(#toggle-drop) {
+            gap: 4.5rem;
+        }
     }
 
     .input-group {
@@ -70,7 +79,6 @@ form {
         border-radius: 0.5rem;
         border: 1px solid var(--input-stroke);
     }
-
 
     .type-input {
         position: absolute;
@@ -92,74 +100,43 @@ form {
         text-align: center;
     }
 
-    .type-input:checked+.type-btn {
+    .type-input:checked + .type-btn {
         background: var(--shape-button);
     }
 
-
-    #online:checked+.type-btn svg path {
+    #online:checked + .type-btn svg path {
         fill: #59B2FF;
     }
 
-    #presencial:not(:checked)+.type-btn svg path {
+    #presencial:not(:checked) + .type-btn svg path {
         fill: #869198;
     }
 
-    #color-buttons button {
-        all: unset;
-        width: 1.75rem;
-        height: 1.75rem;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 0.3125rem solid var(--shape-button);
+    #color-buttons {
+        button {
+            all: unset;
+            width: 1.75rem;
+            height: 1.75rem;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0.3125rem solid var(--shape-button);
+        }
+        
+        #brand-light { background-color: var(--brand-light); }
+        #accent-navy { background-color: var(--accent-navy); }
+        #accent-purple { background-color: var(--accent-purple); }
+        #accent-fuschia { background-color: var(--accent-fuschia); }
+        #accent-pink { background-color: var(--accent-pink); }
+        #feedback-danger { background-color: var(--feedback-danger); }
+        #accent-orange { background-color: var(--accent-orange); }
+        #accent-yellow { background-color: var(--accent-yellow); }
+        #accent-lime { background-color: var(--accent-lime); }
+        #accent-green { background-color: var(--accent-green); }
+        #accent-cyan { background-color: var(--accent-cyan); }
     }
 
-    #color-buttons #brand-light {
-        background-color: var(--brand-light);
-    }
-
-    #color-buttons #accent-navy {
-        background-color: var(--accent-navy);
-    }
-
-    #color-buttons #accent-purple {
-        background-color: var(--accent-purple);
-    }
-
-    #color-buttons #accent-fuschia {
-        background-color: var(--accent-fuschia);
-    }
-
-    #color-buttons #accent-pink {
-        background-color: var(--accent-pink);
-    }
-
-    #color-buttons #feedback-danger {
-        background-color: var(--feedback-danger);
-    }
-
-    #color-buttons #accent-orange {
-        background-color: var(--accent-orange);
-    }
-
-    #color-buttons #accent-yellow {
-        background-color: var(--accent-yellow);
-    }
-
-    #color-buttons #accent-lime {
-        background-color: var(--accent-lime);
-    }
-
-    #color-buttons #accent-green {
-        background-color: var(--accent-green);
-    }
-
-    #color-buttons #accent-cyan {
-        background-color: var(--accent-cyan);
-    }
-
-    #event-theme>p,
-    #main-color>p {
+    #event-theme > p,
+    #main-color > p {
         margin-block: 1.5rem 1rem;
         font: var(--body-sm);
         color: #fff;
@@ -169,25 +146,25 @@ form {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-    }
 
-    #theme-buttons button {
-        all: unset;
-        cursor: pointer;
-        border-radius: 0.5rem;
-        transition: border-color 0.2s ease;
-        background-color: var(--shape-button);
-        border: 1px solid var(--input-stroke);
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.25rem 0.25rem 0 0.25rem;
+        button {
+            all: unset;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            transition: border-color 0.2s ease;
+            background-color: var(--shape-button);
+            border: 1px solid var(--input-stroke);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.25rem 0.25rem 0 0.25rem;
 
-        p {
-            font: var(--body-sm);
-            color: var(--text-heading);
-            padding-block: 0.5rem;
+            p {
+                font: var(--body-sm);
+                color: var(--text-heading);
+                padding-block: 0.5rem;
+            }
         }
     }
 
@@ -205,13 +182,13 @@ form {
         align-items: center;
         gap: 0.75rem;
 
+        input {
+            display: none;
+        }
+
         span {
             width: 2.75rem;
         }
-    }
-
-    .toggle-wrapper input {
-        display: none;
     }
 
     .switch {
@@ -222,43 +199,43 @@ form {
         border-radius: 999px;
         cursor: pointer;
         transition: background 0.3s;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0.2rem;
+            left: 0.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--input-stroke);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
     }
 
-    .switch::after {
-        content: "";
-        position: absolute;
-        top: 0.2rem;
-        left: 0.25rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        background: var(--input-stroke);
-        border-radius: 50%;
-        transition: all 0.3s;
-    }
-
-    .toggle-wrapper input:checked+.switch {
+    .toggle-wrapper input:checked + .switch {
         background: var(--brand-light);
-    }
-
-    .toggle-wrapper input:checked+.switch::after {
-        left: calc(100% - 1.75rem);
-        background: #fff;
+        
+        &::after {
+            left: calc(100% - 1.75rem);
+            background: #fff;
+        }
     }
 
     .mode-text {
         font: var(--body-sm);
         color: var(--text-heading);
+        
+        &.claro {
+            display: none;
+        }
     }
 
-    .mode-text.claro {
+    .toggle-wrapper input:checked ~ .escuro {
         display: none;
     }
 
-    .toggle-wrapper input:checked~.escuro {
-        display: none;
-    }
-
-    .toggle-wrapper input:checked~.claro {
+    .toggle-wrapper input:checked ~ .claro {
         display: inline;
     }
 
@@ -303,20 +280,5 @@ form {
                 color: var(--text-heading);
             }
         }
-
-    }
-
-    input[type="checkbox"] {
-        width: 1.25rem;
-        height: 1.25rem;
-        padding: 0;
-        border-radius: 0.25rem;
-    }
-
-    input[type="checkbox"]:checked {
-        background-image: url("../assets/icons/check.svg");
-        background-repeat: no-repeat;
-        background-size: 1.1rem;
-        border: 1px solid var(--brand-light);
     }
 }
